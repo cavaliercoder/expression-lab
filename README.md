@@ -9,6 +9,9 @@ describe the subset of information you require with real time results shown as c
 Each match also details its index in the collection of match results to help you find the same results in your .Net
 code.
 
+* Download on [SourceForge](https://sourceforge.net/projects/expression-lab/files/latest/download)
+* [Homepage](http://cavaliercoder.com/expression-lab/)
+
 For more information about Regex see the following links:
 
 * Regular Expressions (MSDN) http://msdn.microsoft.com/en-au/library/az24scfc.aspx
