@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Regex_Tool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LastPattern" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\b[Rr]eg([Ee]xp?|ular[\s]+expression)\b</Value>
+    </Setting>
+    <Setting Name="LastInput" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Enter a regular expression pattern above and input text here to see the results returned by the System.Text.RegularExpressions.Regex object.</Value>
+    </Setting>
+    <Setting Name="RegexOptions" Type="System.Text.RegularExpressions.RegexOptions" Scope="User">
+      <Value Profile="(Default)">Multiline</Value>
+    </Setting>
+    <Setting Name="ColorScheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

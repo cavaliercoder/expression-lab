@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90EDCE42-0044-480F-AE3E-CBBAF6598AE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Regex_Tool</RootNamespace>
+    <AssemblyName>Expression Lab</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Edit Text.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DigitalRune\Actions\BookmarkActions.cs" />
+    <Compile Include="DigitalRune\Actions\CaretActions.cs" />
+    <Compile Include="DigitalRune\Actions\ClipBoardActions.cs" />
+    <Compile Include="DigitalRune\Actions\CompletionActions.cs" />
+    <Compile Include="DigitalRune\Actions\FoldActions.cs" />
+    <Compile Include="DigitalRune\Actions\FormatActions.cs" />
+    <Compile Include="DigitalRune\Actions\HomeEndActions.cs" />
+    <Compile Include="DigitalRune\Actions\IEditAction.cs" />
+    <Compile Include="DigitalRune\Actions\MiscActions.cs" />
+    <Compile Include="DigitalRune\Actions\SelectionActions.cs" />
+    <Compile Include="DigitalRune\Document\Bookmarks\Bookmark.cs" />
+    <Compile Include="DigitalRune\Document\Bookmarks\BookmarkEventHandler.cs" />
+    <Compile Include="DigitalRune\Document\Bookmarks\BookmarkManager.cs" />
+    <Compile Include="DigitalRune\Document\Bookmarks\BookmarkRenderer.cs" />
+    <Compile Include="DigitalRune\Document\Bookmarks\IBookmarkFactory.cs" />
+    <Compile Include="DigitalRune\Document\DefaultDocument.cs" />
+    <Compile Include="DigitalRune\Document\DefaultTextEditorProperties.cs" />
+    <Compile Include="DigitalRune\Document\DocumentEventArgs.cs" />
+    <Compile Include="DigitalRune\Document\DocumentFactory.cs" />
+    <Compile Include="DigitalRune\Document\Folding\CSharpFoldingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Folding\Fold.cs" />
+    <Compile Include="DigitalRune\Document\Folding\FoldingManager.cs" />
+    <Compile Include="DigitalRune\Document\Folding\HlslFoldingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Folding\IFoldingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Folding\XmlFoldingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Formatting\CSharpFormattingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Formatting\DefaultFormattingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Formatting\DocumentAccessor.cs" />
+    <Compile Include="DigitalRune\Document\Formatting\HlslFormattingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Formatting\IFormattingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Formatting\Indentation.cs" />
+    <Compile Include="DigitalRune\Document\Formatting\XmlFormattingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\DefaultHighlightingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\FontContainer.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\HighlightBackground.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\HighlightColor.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\HighlightingColorNotFoundException.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\HighlightingDefinitionInvalidException.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\HighlightingDefinitionParser.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\HighlightingManager.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\HighlightingStrategyFactory.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\HighlightRuleSet.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\IHighlightingStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\LookupTable.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\NextMarker.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\PrevMarker.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\Span.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\SpanStack.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\SyntaxModes\FileSyntaxModeProvider.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\SyntaxModes\ISyntaxModeFileProvider.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\SyntaxModes\ResourceSyntaxModeProvider.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\SyntaxModes\SyntaxMode.cs" />
+    <Compile Include="DigitalRune\Document\Highlighting\TextWord.cs" />
+    <Compile Include="DigitalRune\Document\IDocument.cs" />
+    <Compile Include="DigitalRune\Document\ISegment.cs" />
+    <Compile Include="DigitalRune\Document\ITextEditorProperties.cs" />
+    <Compile Include="DigitalRune\Document\LineManager\DeferredEventList.cs" />
+    <Compile Include="DigitalRune\Document\LineManager\LineCountChangedEventArgs.cs" />
+    <Compile Include="DigitalRune\Document\LineManager\LineEventArgs.cs" />
+    <Compile Include="DigitalRune\Document\LineManager\LineLengthChangedEventArgs.cs" />
+    <Compile Include="DigitalRune\Document\LineManager\LineManager.cs" />
+    <Compile Include="DigitalRune\Document\LineManager\LineSegment.cs" />
+    <Compile Include="DigitalRune\Document\LineManager\LineSegmentTree.cs" />
+    <Compile Include="DigitalRune\Document\Markers\Marker.cs" />
+    <Compile Include="DigitalRune\Document\Markers\MarkerStrategy.cs" />
+    <Compile Include="DigitalRune\Document\Markers\MarkerType.cs" />
+    <Compile Include="DigitalRune\Document\Selection\ColumnRange.cs" />
+    <Compile Include="DigitalRune\Document\Selection\DefaultSelection.cs" />
+    <Compile Include="DigitalRune\Document\Selection\ISelection.cs" />
+    <Compile Include="DigitalRune\Document\Selection\SelectionManager.cs" />
+    <Compile Include="DigitalRune\Document\TextAnchor.cs" />
+    <Compile Include="DigitalRune\Document\TextBuffer\GapTextBufferStrategy.cs" />
+    <Compile Include="DigitalRune\Document\TextBuffer\ITextBufferStrategy.cs" />
+    <Compile Include="DigitalRune\Document\TextLocation.cs" />
+    <Compile Include="DigitalRune\GUI\AbstractMargin.cs" />
+    <Compile Include="DigitalRune\GUI\BracketHighlighter.cs" />
+    <Compile Include="DigitalRune\GUI\BrushRegistry.cs" />
+    <Compile Include="DigitalRune\GUI\Caret.cs" />
+    <Compile Include="DigitalRune\GUI\Completion\AbstractCompletionDataProvider.cs" />
+    <Compile Include="DigitalRune\GUI\Completion\AbstractCompletionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\Completion\CompletionEventArgs.cs" />
+    <Compile Include="DigitalRune\GUI\Completion\CompletionListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\Completion\CompletionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\Completion\DeclarationViewWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\Completion\DefaultCompletionData.cs" />
+    <Compile Include="DigitalRune\GUI\Completion\ICompletionData.cs" />
+    <Compile Include="DigitalRune\GUI\Completion\ICompletionDataProvider.cs" />
+    <Compile Include="DigitalRune\GUI\Completion\TextCompletionDataProvider.cs" />
+    <Compile Include="DigitalRune\GUI\FoldMargin.cs" />
+    <Compile Include="DigitalRune\GUI\HRuler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\IconMargin.cs" />
+    <Compile Include="DigitalRune\GUI\Ime.cs" />
+    <Compile Include="DigitalRune\GUI\Insight\AbstractInsightDataProvider.cs" />
+    <Compile Include="DigitalRune\GUI\Insight\IInsightDataProvider.cs" />
+    <Compile Include="DigitalRune\GUI\Insight\InsightEventArgs.cs" />
+    <Compile Include="DigitalRune\GUI\Insight\InsightWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\LineNumberMargin.cs" />
+    <Compile Include="DigitalRune\GUI\TextArea.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextAreaClipboardHandler.cs" />
+    <Compile Include="DigitalRune\GUI\TextAreaControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextAreaDragDropHandler.cs" />
+    <Compile Include="DigitalRune\GUI\TextAreaMouseHandler.cs" />
+    <Compile Include="DigitalRune\GUI\TextAreaUpdate.cs" />
+    <Compile Include="DigitalRune\GUI\TextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextEditorControl_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextEditorControl_Completion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextEditorControl_EditActions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextEditorControl_Insight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextEditorControl_Printing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextEditorControl_TextEditorProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextEditorControl_ToolTips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextEditorControl_Update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DigitalRune\GUI\TextView.cs" />
+    <Compile Include="DigitalRune\GUI\Tip\TipPainter.cs" />
+    <Compile Include="DigitalRune\GUI\Tip\TipPainterTools.cs" />
+    <Compile Include="DigitalRune\GUI\Tip\TipSection.cs" />
+    <Compile Include="DigitalRune\GUI\Tip\TipSpacer.cs" />
+    <Compile Include="DigitalRune\GUI\Tip\TipSplitter.cs" />
+    <Compile Include="DigitalRune\GUI\Tip\TipText.cs" />
+    <Compile Include="DigitalRune\GUI\ToolTipRequestEventArgs.cs" />
+    <Compile Include="DigitalRune\Snippets\Snippet.cs" />
+    <Compile Include="DigitalRune\Snippets\SnippetCompletionData.cs" />
+    <Compile Include="DigitalRune\Snippets\SnippetCompletionDataProvider.cs" />
+    <Compile Include="DigitalRune\Undo\IUndoableOperation.cs" />
+    <Compile Include="DigitalRune\Undo\UndoableDelete.cs" />
+    <Compile Include="DigitalRune\Undo\UndoableInsert.cs" />
+    <Compile Include="DigitalRune\Undo\UndoableReplace.cs" />
+    <Compile Include="DigitalRune\Undo\UndoQueue.cs" />
+    <Compile Include="DigitalRune\Undo\UndoStack.cs" />
+    <Compile Include="DigitalRune\Utilities\CheckedList.cs" />
+    <Compile Include="DigitalRune\Utilities\FileReader.cs" />
+    <Compile Include="DigitalRune\Utilities\MouseWheelHandler.cs" />
+    <Compile Include="DigitalRune\Utilities\Red-Black Tree\AugmentableRedBlackTree.cs" />
+    <Compile Include="DigitalRune\Utilities\Red-Black Tree\IRedBlackTreeHost.cs" />
+    <Compile Include="DigitalRune\Utilities\Red-Black Tree\RedBlackTreeIterator.cs" />
+    <Compile Include="DigitalRune\Utilities\Red-Black Tree\RedBlackTreeNode.cs" />
+    <Compile Include="DigitalRune\Utilities\RtfWriter.cs" />
+    <Compile Include="DigitalRune\Utilities\TextHelper.cs" />
+    <Compile Include="DigitalRune\Utilities\WeakCollection.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupSelectorForm.Designer.cs">
+      <DependentUpon>GroupSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="ProjectColorScheme.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Drawing\ColorScheme.cs" />
+    <Compile Include="System\Drawing\SystemColorScheme.cs" />
+    <Compile Include="System\Drawing\XmlColor.cs" />
+    <Compile Include="System\IO\DataFile.cs" />
+    <Compile Include="System\StringExtensions.cs" />
+    <Compile Include="System\Text\RegularExpressions\Pattern.cs" />
+    <Compile Include="System\Text\RegularExpressions\PatternCharacterClass.cs" />
+    <Compile Include="System\Text\RegularExpressions\PatternComment.cs" />
+    <Compile Include="System\Text\RegularExpressions\PatternElement.cs" />
+    <Compile Include="System\Text\RegularExpressions\PatternError.cs" />
+    <Compile Include="System\Text\RegularExpressions\PatternGroup.cs" />
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupSelectorForm.resx">
+      <DependentUpon>GroupSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Edit Text.ico" />
+    <None Include="Resources\gear_3.bmp" />
+    <None Include="Resources\SuccessComplete.bmp" />
+    <None Include="Resources\Critical.bmp" />
+    <None Include="Resources\Copy.bmp" />
+    <None Include="Resources\VSObject_Object.bmp" />
+    <None Include="Resources\VSObject_Namespace.bmp" />
+    <None Include="Resources\ChooseColor.bmp" />
+    <None Include="Resources\Paste.bmp" />
+    <None Include="Resources\Open.bmp" />
+    <None Include="Resources\Pause.bmp" />
+    <None Include="Resources\FormRun.bmp" />
+    <None Include="Resources\Find24_VS.bmp" />
+    <None Include="Resources\Color_linecolor.bmp" />
+    <None Include="Resources\CheckGrammar.bmp" />
+    <None Include="Resources\ActualSize.bmp" />
+    <None Include="Resources\Filter2.bmp" />
+    <None Include="Resources\Save.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
